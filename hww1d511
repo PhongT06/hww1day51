@@ -1,0 +1,190 @@
+#1
+
+# def add(x, y):
+#     return x + y
+# def subtract(x, y):
+#     return x - y
+# def multiply(x, y):
+#     return x * y
+# def divide(x, y):
+#     if y == 0:
+#         raise ValueError("Cannot divide by zero")
+#     return x / y
+
+# def get_numbers():
+#     while True:
+#         try:
+#             x = float(input("Enter the first number: "))
+#             y = float(input("Enter the second number: "))
+#             return x, y
+#         except ValueError:
+#             print("Invalid input. Please enter numbers only.")
+
+# def get_operation():
+#     while True:
+#         operation = input("Choose an operation (+, -, *, /): ")
+#         if operation in ['+', '-', '*', '/']:
+#             return operation
+#         else:
+#             print("Invalid operation. Please choose from +, -, *, /.")
+
+# def calculate():
+#     x, y = get_numbers()
+#     operation = get_operation()
+#     try:
+#         if operation == '+':
+#             result = add(x, y)
+#         elif operation == '-':
+#             result = subtract(x, y)
+#         elif operation == '*':
+#             result = multiply(x, y)
+#         elif operation == '/':
+#             result = divide(x, y)
+#         print("Result:", result)
+#     except Exception as e:
+#         print("Error occurred:", e)
+
+# calculate()
+
+#2
+
+# def add_item(shopping_list):
+#     item = input("Enter the item to add: ")
+#     shopping_list.append(item)
+#     print(item, "has been added to the shopping list.")
+
+# def remove_item(shopping_list):
+#     if not shopping_list:
+#         print("The shopping list is empty.")
+#         return
+#     print("Current shopping list:")
+#     print("\n".join(shopping_list))
+#     item_to_remove = input("Enter the item to remove: ")
+#     if item_to_remove in shopping_list:
+#         shopping_list.remove(item_to_remove)
+#         print(item_to_remove, "has been removed from the shopping list.")
+#     else:
+#         print(item_to_remove, "is not in the shopping list.")
+
+# def print_list(shopping_list):
+#     if not shopping_list:
+#         print("The shopping list is empty.")
+#         return
+#     print("Shopping List:")
+#     print("\n".join(shopping_list))
+
+# def main():
+#     shopping_list = []
+#     while True:
+#         print("\nOptions:")
+#         print("1. Add item")
+#         print("2. Remove item")
+#         print("3. Print shopping list")
+#         print("4. Exit")
+
+#         choice = input("Enter your choice: ")
+#         if choice == '1':
+#             add_item(shopping_list)
+#         elif choice == '2':
+#             remove_item(shopping_list)
+#         elif choice == '3':
+#             print_list(shopping_list)
+#         elif choice == '4':
+#             print("Exiting program.")
+#             break
+#         else:
+#             print("Invalid choice. Please enter a valid option.")
+# if __name__ == "__main__":
+#     main()
+
+#3
+    
+def calculate_average(grades):
+    if not grades:
+        return 0
+    return sum(grades) / len(grades)
+
+def find_highest_and_lowest(grades):
+    if not grades:
+        return None, None
+    return max(grades), min(grades)
+
+def categorize_grades(grades):
+    letter_grades = []
+    for grade in grades:
+        if grade >= 90:
+            letter_grades.append('A')
+        elif grade >= 80:
+            letter_grades.append('B')
+        elif grade >= 70:
+            letter_grades.append('C')
+        elif grade >= 60:
+            letter_grades.append('D')
+        else:
+            letter_grades.append('F')
+    return letter_grades
+
+def main():
+    grades = [87, 93, 72, 84, 79, 90, 64, 80, 77, 99]
+
+    average_grade = calculate_average(grades)
+    print("Average Grade:", average_grade)
+
+    highest_grade, lowest_grade = find_highest_and_lowest(grades)
+    print("Highest Grade:", highest_grade)
+    print("Lowest Grade:", lowest_grade)
+
+    letter_grades = categorize_grades(grades)
+    print("Letter Grades:", letter_grades)
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
